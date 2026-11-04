@@ -1,0 +1,54 @@
+body.project-page {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    background: #f5f5f5;
+}
+
+.project-page main {
+    flex: 1;
+}
+
+.site-nav,
+.site-footer {
+    background: #388e3c;
+}
+
+.page-hero,
+.team-section {
+    background: #e8f5e9;
+}
+
+.page-hero {
+    padding: 25px 0;
+}
+
+.member-avatar {
+    display: flex;
+    width: 60px;
+    height: 60px;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    border-radius: 50%;
+    background: #c8e6c9;
+}
+
+.filter-controls {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 20px;
+}
+
+.filter-button,
+.filter-button:hover,
+.filter-button.active,
+.detail-button {
+    background: #388e3c;
+    color: white;
+}
+
+.detail-button {
+    text-transform: none;
+}

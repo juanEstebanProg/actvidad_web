@@ -1,15 +1,127 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <h3>Misión y Visión del proyecto.
-o Integrantes del grupo con fotos o avatares (pueden usar
-Materialize Cards).
-o Breve descripción del rol de cada integrante.</h3>
+    <meta name="description" content="Conoce la misión, visión e integrantes del equipo de Jay-wallet.">
+    <title>Nosotros | Jay-wallet</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
-    
+<body class="project-page">
+    <header>
+        <nav class="site-nav" aria-label="Navegación principal">
+            <div class="nav-wrapper container">
+                <a href="index.html" class="brand-logo">Jay-wallet</a>
+                <a href="#" data-target="mobile-nav" class="sidenav-trigger" aria-label="Abrir menú">
+                    <i class="material-icons">menu</i>
+                </a>
+                <ul class="right hide-on-med-and-down">
+                    <li><a href="index.html">Inicio</a></li>
+                    <li class="active"><a href="nosotros.html" aria-current="page">Nosotros</a></li>
+                    <li><a href="objetivos.html">Objetivos</a></li>
+                    <li><a href="avances.html">Avances</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                </ul>
+            </div>
+        </nav>
+        <ul class="sidenav" id="mobile-nav">
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="nosotros.html" aria-current="page">Nosotros</a></li>
+            <li><a href="objetivos.html">Objetivos</a></li>
+            <li><a href="avances.html">Avances</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+    </header>
+
+    <main>
+        <section class="page-hero">
+            <div class="container">
+                <p class="eyebrow">Proyecto Integrador I</p>
+                <h1>Conoce a nuestro equipo</h1>
+                <p>Trabajamos en una herramienta sencilla para organizar préstamos y deudas.</p>
+            </div>
+        </section>
+
+        <section class="section container" aria-labelledby="purpose-title">
+            <div class="section-heading">
+                <p class="eyebrow">Nuestro propósito</p>
+                <h2 id="purpose-title">Una mejor forma de llevar las cuentas</h2>
+            </div>
+            <div class="row">
+                <div class="col s12 m6">
+                    <article class="card purpose-card">
+                        <div class="card-content">
+                            <span class="card-title"><i class="material-icons" aria-hidden="true">flag</i> Misión</span>
+                            <p>Desarrollar una aplicación web clara y fácil de usar que ayude a las personas a registrar y consultar sus préstamos y deudas, para que puedan llevar un mejor control de sus compromisos financieros.</p>
+                        </div>
+                    </article>
+                </div>
+                <div class="col s12 m6">
+                    <article class="card purpose-card">
+                        <div class="card-content">
+                            <span class="card-title"><i class="material-icons" aria-hidden="true">visibility</i> Visión</span>
+                            <p>Ser una herramienta práctica y confiable para organizar las cuentas personales, facilitando el seguimiento de cada préstamo desde una experiencia accesible y ordenada.</p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="section team-section" aria-labelledby="team-title">
+            <div class="container">
+                <div class="section-heading">
+                    <p class="eyebrow">Personas detrás de la idea</p>
+                    <h2 id="team-title">Nuestro equipo</h2>
+                    <p>Un equipo que aporta análisis, diseño y desarrollo para hacer realidad Jay-wallet.</p>
+                </div>
+                <div class="row">
+                    <div class="col s12 m4">
+                        <article class="card team-card">
+                            <div class="card-content center-align">
+                                <div class="member-avatar" aria-hidden="true">JP</div>
+                                <span class="card-title">Juan Pérez</span>
+                                <p class="member-role">Análisis y coordinación</p>
+                                <p>Organiza los requerimientos del proyecto y apoya la planificación de las funcionalidades.</p>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="col s12 m4">
+                        <article class="card team-card">
+                            <div class="card-content center-align">
+                                <div class="member-avatar" aria-hidden="true">A</div>
+                                <span class="card-title">Aleja</span>
+                                <p class="member-role">Diseño de interfaz</p>
+                                <p>Propone una experiencia visual clara para que registrar y consultar cuentas sea sencillo.</p>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="col s12 m4">
+                        <article class="card team-card">
+                            <div class="card-content center-align">
+                                <div class="member-avatar" aria-hidden="true">YR</div>
+                                <span class="card-title">Yilmar Riascos</span>
+                                <p class="member-role">Desarrollo e integración</p>
+                                <p>Apoya la construcción de la aplicación y la integración de sus componentes.</p>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="page-footer site-footer">
+        <div class="container">
+            <p>Jay-wallet · Proyecto Integrador I · Ingeniería de Sistemas</p>
+            <p>Equipo: Juan Pérez, Aleja y Yilmar Riascos</p>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="js/main.js"></script>
 </body>
 </html>
