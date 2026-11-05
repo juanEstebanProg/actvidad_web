@@ -1,21 +1,21 @@
 /* =========================================================
    Jay-wallet - Hoja de estilos personalizada
-   Paleta: Turquesa Jay-wallet (colores del icono)
+   Estilos compartidos del sitio
    Este archivo lo usan TODAS las paginas del sitio.
    ========================================================= */
 
 /* ---------- 1. Variables de la paleta ---------- */
 :root {
-  --jw-principal: #00616B;    /* turquesa oscuro (petroleo): navbar, footer, titulos */
-  --jw-secundario: #0097A7;   /* turquesa: botones */
-  --jw-acento: #FBC02D;       /* amarillo: detalles y hover */
-  --jw-acento-claro: #FEF781; /* amarillo claro del icono: fondos suaves */
-  --jw-fondo: #F3F8F9;        /* gris muy claro: fondo de la pagina */
-  --jw-texto: #263238;        /* gris oscuro: texto normal */
+  --jw-principal: #164E52;
+  --jw-secundario: #287D78;
+  --jw-acento: #D5A744;
+  --jw-acento-claro: #F3F4EF;
+  --jw-fondo: #F7F8F6;
+  --jw-texto: #283432;
   --jw-blanco: #FFFFFF;
-  --jw-error: #C62828;        /* rojo: errores del formulario */
-  --jw-sombra: 0 4px 14px rgba(0, 97, 107, 0.12);
-  --jw-radio: 12px;
+  --jw-error: #B3261E;
+  --jw-sombra: 0 2px 10px rgba(22, 78, 82, 0.08);
+  --jw-radio: 8px;
 }
 
 /* ---------- 2. Base: tipografia y fondo ---------- */
@@ -25,7 +25,7 @@ body {
   flex-direction: column;
   background-color: var(--jw-fondo);
   color: var(--jw-texto);
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Segoe UI', sans-serif;
 }
 
 main {
@@ -34,12 +34,12 @@ main {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Segoe UI', sans-serif;
   font-weight: 600;
   color: var(--jw-principal);
 }
 
-/* Titulo de seccion con linea amarilla debajo */
+/* Titulo de seccion */
 .jw-titulo {
   position: relative;
   padding-bottom: 12px;
@@ -51,10 +51,9 @@ h1, h2, h3, h4, h5, h6 {
   position: absolute;
   left: 0;
   bottom: 0;
-  width: 70px;
-  height: 4px;
-  border-radius: 2px;
-  background-color: var(--jw-acento);
+  width: 36px;
+  height: 2px;
+  background-color: var(--jw-secundario);
 }
 
 .jw-titulo.center-align::after {
@@ -64,8 +63,13 @@ h1, h2, h3, h4, h5, h6 {
 
 /* ---------- 3. Componente Materialize: NAVBAR ---------- */
 nav {
-  background-color: var(--jw-principal);
-  box-shadow: var(--jw-sombra);
+  background-color: var(--jw-blanco);
+  box-shadow: 0 1px 5px rgba(22, 78, 82, 0.08);
+}
+
+nav .brand-logo,
+nav ul a {
+  color: var(--jw-principal);
 }
 
 nav .brand-logo {
@@ -90,14 +94,14 @@ nav ul a {
 }
 
 nav ul a:hover {
-  background-color: rgba(255, 255, 255, 0.1);
-  color: var(--jw-acento);
+  background-color: var(--jw-acento-claro);
+  color: var(--jw-principal);
 }
 
 /* Pagina actual resaltada en el menu (class="active" en el <li>) */
 nav ul li.active {
   background-color: transparent;
-  border-bottom: 3px solid var(--jw-acento);
+  border-bottom: 2px solid var(--jw-secundario);
 }
 
 /* Menu lateral en celular */
@@ -108,10 +112,9 @@ nav ul li.active {
 
 /* ---------- 4. Banner / encabezado de pagina ---------- */
 .jw-banner {
-  background: linear-gradient(135deg, var(--jw-principal), var(--jw-secundario));
+  background: var(--jw-principal);
   color: var(--jw-blanco);
   padding: 50px 0;
-  border-bottom: 5px solid var(--jw-acento);
 }
 
 .jw-banner h1,
@@ -123,7 +126,7 @@ nav ul li.active {
 
 .jw-banner p {
   font-size: 1.15rem;
-  opacity: 0.9;
+  opacity: 0.92;
 }
 
 /* ---------- 5. Caja blanca que envuelve el contenido ---------- */
@@ -131,14 +134,12 @@ nav ul li.active {
   background-color: var(--jw-blanco);
   border-radius: var(--jw-radio);
   box-shadow: var(--jw-sombra);
-  border-top: 5px solid var(--jw-acento);
   padding: 30px;
 }
 
 /* ---------- 6. FOOTER ---------- */
 .page-footer {
   background-color: var(--jw-principal);
-  border-top: 5px solid var(--jw-acento);
   padding-top: 30px;
 }
 
@@ -154,10 +155,10 @@ nav ul li.active {
 .btn,
 .btn-large {
   background-color: var(--jw-secundario);
-  border-radius: 25px;
-  font-family: 'Poppins', sans-serif;
+  border-radius: 8px;
+  font-family: 'Segoe UI', sans-serif;
   font-weight: 600;
-  letter-spacing: 0.5px;
+  letter-spacing: normal;
   text-transform: none;
   padding: 0 28px;
 }
@@ -226,12 +227,6 @@ nav ul li.active {
 .card {
   border-radius: var(--jw-radio);
   box-shadow: var(--jw-sombra);
-  transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 24px rgba(0, 97, 107, 0.2);
 }
 
 .card .card-title {
@@ -248,33 +243,6 @@ nav ul li.active {
   font-weight: 600;
 }
 
-/* ---------- 11. COLLAPSIBLE y COLLECTION (para Objetivos y Avances) ---------- */
-.collapsible {
-  border-radius: var(--jw-radio);
-  overflow: hidden;
-}
-
-.collapsible-header {
-  font-weight: 500;
-}
-
-.collapsible-header i {
-  color: var(--jw-secundario);
-}
-
-.collapsible li.active .collapsible-header {
-  background-color: var(--jw-acento-claro);
-  color: var(--jw-principal);
-}
-
-.collection {
-  border-radius: var(--jw-radio);
-}
-
-.collection .collection-item.active {
-  background-color: var(--jw-secundario);
-}
-
 /* ---------- 12. Pagina de INICIO ---------- */
 .jw-hero-inicio {
   padding: 60px 0;
@@ -285,8 +253,7 @@ nav ul li.active {
   height: 150px;
   border-radius: 50%;
   background-color: var(--jw-blanco);
-  border: 5px solid var(--jw-acento);
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+  border: 3px solid var(--jw-acento-claro);
 }
 
 .jw-hero-inicio .btn-large {
@@ -297,11 +264,6 @@ nav ul li.active {
 .jw-seccion-card {
   display: block;
   color: var(--jw-texto);
-  border-top: 4px solid var(--jw-secundario);
-}
-
-.jw-seccion-card:hover {
-  border-top-color: var(--jw-acento);
 }
 
 .jw-seccion-card .material-icons.large {
@@ -318,7 +280,7 @@ nav ul li.active {
 
 .jw-objetivo-general .material-icons {
   font-size: 4rem;
-  color: var(--jw-acento);
+  color: var(--jw-secundario);
 }
 
 .jw-objetivo-general p {
@@ -328,11 +290,9 @@ nav ul li.active {
 
 /* ---------- 14. Paginas de NOSOTROS y AVANCES ---------- */
 .eyebrow {
-  margin: 0 0 6px;
-  font-size: 0.85rem;
+  margin: 0 0 8px;
+  font-size: 0.9rem;
   font-weight: 600;
-  letter-spacing: 1.5px;
-  text-transform: uppercase;
   color: var(--jw-acento);
 }
 
@@ -356,14 +316,13 @@ nav ul li.active {
   position: absolute;
   left: 0;
   bottom: 0;
-  width: 70px;
-  height: 4px;
-  border-radius: 2px;
-  background-color: var(--jw-acento);
+  width: 36px;
+  height: 2px;
+  background-color: var(--jw-secundario);
 }
 
 .team-section {
-  background-color: #E0F4F6; /* turquesa muy claro */
+  background-color: var(--jw-acento-claro);
   padding: 40px 0;
 }
 
@@ -380,7 +339,7 @@ nav ul li.active {
   justify-content: center;
   margin: 0 auto 10px;
   border-radius: 50%;
-  border: 3px solid var(--jw-acento);
+  border: 2px solid var(--jw-secundario);
   background-color: var(--jw-secundario);
   color: var(--jw-blanco);
   font-size: 1.3rem;
@@ -393,32 +352,6 @@ nav ul li.active {
   margin-top: -5px;
 }
 
-/* Filtros de avances */
-.filter-controls {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-  margin-bottom: 20px;
-}
-
-.btn.filter-button {
-  background-color: var(--jw-blanco);
-  color: var(--jw-secundario);
-  border: 2px solid var(--jw-secundario);
-  box-shadow: none;
-  line-height: 32px;
-}
-
-.btn.filter-button:hover {
-  background-color: #E0F4F6;
-}
-
-.btn.filter-button.active {
-  background-color: var(--jw-secundario);
-  color: var(--jw-blanco);
-}
-
-/* Etiquetas de estado de cada avance */
 .status-label {
   display: inline-block;
   margin-bottom: 10px;
@@ -429,7 +362,7 @@ nav ul li.active {
 }
 
 .status-done {
-  background-color: #E0F4F6;
+  background-color: #E5F0ED;
   color: var(--jw-principal);
 }
 
@@ -443,25 +376,14 @@ nav ul li.active {
   color: #546E7A;
 }
 
-.progress-detail {
-  margin-top: 10px;
-  padding: 10px 12px;
-  border-left: 3px solid var(--jw-acento);
-  background-color: var(--jw-fondo);
-  border-radius: 0 8px 8px 0;
+.objective-list {
+  margin: 0;
+  padding-left: 1.25rem;
 }
 
-.btn-flat.detail-button {
-  margin-top: 10px;
-  padding: 0 10px;
-  color: var(--jw-secundario);
-  font-weight: 600;
-  text-transform: none;
-}
-
-.btn-flat.detail-button:focus,
-.btn-flat.detail-button:hover {
-  background-color: #E0F4F6;
+.objective-list li {
+  margin-bottom: 12px;
+  padding-left: 4px;
 }
 
 /* ---------- 15. Responsive (celular) ---------- */
