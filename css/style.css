@@ -1,0 +1,146 @@
+/* =========================================================
+   Jay-wallet - Hoja de estilos personalizada
+   Paleta: Turquesa Jay-wallet (colores del icono)
+   Este archivo lo usan TODAS las páginas del sitio.
+   ========================================================= */
+
+/* ---------- 1. Variables de la paleta ---------- */
+:root {
+  --jw-principal: #00616B;    /* turquesa oscuro (petróleo): navbar, footer, títulos */
+  --jw-secundario: #0097A7;   /* turquesa: botones */
+  --jw-acento: #FBC02D;       /* amarillo: detalles y hover */
+  --jw-acento-claro: #FEF781; /* amarillo claro del ícono: fondos suaves */
+  --jw-fondo: #F3F8F9;        /* gris muy claro: fondo de la página */
+  --jw-texto: #263238;        /* gris oscuro: texto normal */
+  --jw-blanco: #FFFFFF;
+  --jw-sombra: 0 4px 14px rgba(0, 97, 107, 0.12);
+  --jw-radio: 12px;
+}
+/* ---------- 2. Base: tipografía y fondo ---------- */
+body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  background-color: var(--jw-fondo);
+  color: var(--jw-texto);
+  font-family: 'Poppins', sans-serif;
+}
+
+main {
+  flex: 1 0 auto; /* empuja el footer al fondo de la página */
+  padding: 30px 0 50px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  color: var(--jw-principal);
+}
+
+/* Título de sección con línea amarilla debajo */
+.jw-titulo {
+  position: relative;
+  padding-bottom: 12px;
+  margin-bottom: 30px;
+}
+
+.jw-titulo::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 70px;
+  height: 4px;
+  border-radius: 2px;
+  background-color: var(--jw-acento);
+}
+
+.jw-titulo.center-align::after {
+  left: 50%;
+  transform: translateX(-50%);
+}
+/* ---------- 3. Componente Materialize: NAVBAR ---------- */
+nav {
+  background-color: var(--jw-principal);
+  box-shadow: var(--jw-sombra);
+}
+
+nav .brand-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 600;
+  font-size: 1.6rem;
+  padding-left: 10px;
+}
+
+nav .brand-logo img {
+  height: 42px;
+  width: 42px;
+  border-radius: 50%;
+  background-color: var(--jw-blanco);
+}
+
+nav ul a {
+  font-weight: 500;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+nav ul a:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: var(--jw-acento);
+}
+
+/* Página actual resaltada en el menú (class="active" en el <li>) */
+nav ul li.active {
+  background-color: transparent;
+  border-bottom: 3px solid var(--jw-acento);
+}
+
+/* Menú lateral en celular */
+.sidenav li > a:hover {
+  color: var(--jw-principal);
+  background-color: var(--jw-acento-claro);
+}
+/* ---------- 4. Banner / encabezado de página ---------- */
+.jw-banner {
+  background: linear-gradient(135deg, var(--jw-principal), var(--jw-secundario));
+  color: var(--jw-blanco);
+  padding: 50px 0;
+  border-bottom: 5px solid var(--jw-acento);
+}
+
+.jw-banner h1,
+.jw-banner h2,
+.jw-banner h3 {
+  color: var(--jw-blanco);
+  margin-top: 0;
+}
+
+.jw-banner p {
+  font-size: 1.15rem;
+  opacity: 0.9;
+}
+
+/* ---------- 5. Caja blanca que envuelve el contenido ---------- */
+.jw-caja {
+  background-color: var(--jw-blanco);
+  border-radius: var(--jw-radio);
+  box-shadow: var(--jw-sombra);
+  border-top: 5px solid var(--jw-acento);
+  padding: 30px;
+}
+/* ---------- 6. FOOTER ---------- */
+.page-footer {
+  background-color: var(--jw-principal);
+  border-top: 5px solid var(--jw-acento);
+  padding-top: 30px;
+}
+
+.page-footer h5 {
+  color: var(--jw-acento);
+}
+
+.page-footer .footer-copyright {
+  background-color: rgba(0, 0, 0, 0.15);
+}
