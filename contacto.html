@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Escríbele al equipo de Jay-wallet.">
     <title>Contacto | Jay-wallet</title>
 
     <!-- Fuente Poppins (Google Fonts) -->
@@ -18,19 +19,19 @@
 <body>
 
     <!-- ===== NAVBAR ===== -->
-    <nav>
+    <nav aria-label="Navegación principal">
         <div class="nav-wrapper container">
             <a href="index.html" class="brand-logo">
                 <img src="img/icono.webp" alt="Logo Jay-wallet">
                 Jay-wallet
             </a>
-            <a href="#" data-target="menu-movil" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+            <a href="#" data-target="menu-movil" class="sidenav-trigger" aria-label="Abrir menú"><i class="material-icons">menu</i></a>
             <ul class="right hide-on-med-and-down">
                 <li><a href="index.html">Inicio</a></li>
                 <li><a href="nosotros.html">Nosotros</a></li>
                 <li><a href="objetivos.html">Objetivos</a></li>
                 <li><a href="avances.html">Avances</a></li>
-                <li class="active"><a href="contacto.html">Contacto</a></li>
+                <li class="active"><a href="contacto.html" aria-current="page">Contacto</a></li>
             </ul>
         </div>
     </nav>
@@ -47,6 +48,7 @@
     <!-- ===== BANNER ===== -->
     <section class="jw-banner">
         <div class="container">
+            <p class="eyebrow">Hablemos</p>
             <h2>Contáctanos</h2>
             <p>¿Tienes preguntas o sugerencias sobre Jay-wallet? Escríbenos.</p>
         </div>
@@ -119,9 +121,4 @@
         </div>
     </footer>
 
-    <!-- Materialize JS (CDN) y nuestro JS, al final del body -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-    <script src="js/main.js"></script>
-
-</body>
-</html>
+    <!-- Materialize JS (CDN) y nuestro JS, al

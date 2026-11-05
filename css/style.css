@@ -275,7 +275,196 @@ nav ul li.active {
   background-color: var(--jw-secundario);
 }
 
-/* ---------- 12. Responsive (celular) ---------- */
+/* ---------- 12. Pagina de INICIO ---------- */
+.jw-hero-inicio {
+  padding: 60px 0;
+}
+
+.jw-hero-inicio .jw-logo-grande {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background-color: var(--jw-blanco);
+  border: 5px solid var(--jw-acento);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+}
+
+.jw-hero-inicio .btn-large {
+  margin: 10px 6px 0 0;
+}
+
+/* Tarjetas que llevan a cada seccion */
+.jw-seccion-card {
+  display: block;
+  color: var(--jw-texto);
+  border-top: 4px solid var(--jw-secundario);
+}
+
+.jw-seccion-card:hover {
+  border-top-color: var(--jw-acento);
+}
+
+.jw-seccion-card .material-icons.large {
+  color: var(--jw-secundario);
+}
+
+/* ---------- 13. Pagina de OBJETIVOS ---------- */
+.jw-objetivo-general {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 40px;
+}
+
+.jw-objetivo-general .material-icons {
+  font-size: 4rem;
+  color: var(--jw-acento);
+}
+
+.jw-objetivo-general p {
+  font-size: 1.2rem;
+  margin: 0;
+}
+
+/* ---------- 14. Paginas de NOSOTROS y AVANCES ---------- */
+.eyebrow {
+  margin: 0 0 6px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--jw-acento);
+}
+
+.section {
+  padding: 30px 0;
+}
+
+.section-heading {
+  margin-bottom: 25px;
+}
+
+.section-heading h2 {
+  position: relative;
+  margin: 0 0 15px;
+  padding-bottom: 12px;
+  font-size: 2.2rem;
+}
+
+.section-heading h2::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 70px;
+  height: 4px;
+  border-radius: 2px;
+  background-color: var(--jw-acento);
+}
+
+.team-section {
+  background-color: #E0F4F6; /* turquesa muy claro */
+  padding: 40px 0;
+}
+
+.purpose-card .card-title i {
+  color: var(--jw-acento);
+  vertical-align: middle;
+}
+
+.member-avatar {
+  display: flex;
+  width: 70px;
+  height: 70px;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 10px;
+  border-radius: 50%;
+  border: 3px solid var(--jw-acento);
+  background-color: var(--jw-secundario);
+  color: var(--jw-blanco);
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+
+.member-role {
+  color: var(--jw-secundario);
+  font-weight: 600;
+  margin-top: -5px;
+}
+
+/* Filtros de avances */
+.filter-controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+
+.btn.filter-button {
+  background-color: var(--jw-blanco);
+  color: var(--jw-secundario);
+  border: 2px solid var(--jw-secundario);
+  box-shadow: none;
+  line-height: 32px;
+}
+
+.btn.filter-button:hover {
+  background-color: #E0F4F6;
+}
+
+.btn.filter-button.active {
+  background-color: var(--jw-secundario);
+  color: var(--jw-blanco);
+}
+
+/* Etiquetas de estado de cada avance */
+.status-label {
+  display: inline-block;
+  margin-bottom: 10px;
+  padding: 3px 12px;
+  border-radius: 15px;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.status-done {
+  background-color: #E0F4F6;
+  color: var(--jw-principal);
+}
+
+.status-progress {
+  background-color: var(--jw-acento-claro);
+  color: #8D6E00;
+}
+
+.status-next {
+  background-color: #ECEFF1;
+  color: #546E7A;
+}
+
+.progress-detail {
+  margin-top: 10px;
+  padding: 10px 12px;
+  border-left: 3px solid var(--jw-acento);
+  background-color: var(--jw-fondo);
+  border-radius: 0 8px 8px 0;
+}
+
+.btn-flat.detail-button {
+  margin-top: 10px;
+  padding: 0 10px;
+  color: var(--jw-secundario);
+  font-weight: 600;
+  text-transform: none;
+}
+
+.btn-flat.detail-button:focus,
+.btn-flat.detail-button:hover {
+  background-color: #E0F4F6;
+}
+
+/* ---------- 15. Responsive (celular) ---------- */
 @media (max-width: 600px) {
   nav .brand-logo {
     font-size: 1.3rem;

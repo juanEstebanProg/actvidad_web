@@ -7,12 +7,19 @@ document.addEventListener('DOMContentLoaded', function () {
     //    (menu lateral del celular, collapsibles, modals, etc.)
     M.AutoInit();
 
-    // 2. Validacion del formulario de contacto
-    //    Solo se ejecuta si la pagina tiene el formulario (contacto.html)
+    // 2. Mensaje de bienvenida (solo en index.html)
+    if (document.getElementById('inicio')) {
+        M.toast({ html: '¡Bienvenido a Jay-wallet! 👋', classes: 'jw-toast-ok' });
+    }
+
+    // 3. Validacion del formulario de contacto (solo en contacto.html)
     const formulario = document.getElementById('form-contacto');
     if (formulario) {
         iniciarFormularioContacto(formulario);
     }
+
+    // 4. Filtros y "Ver detalle" de avances (solo en avances.html)
+    iniciarAvances();
 });
 
 // ---------------------------------------------------------
@@ -99,4 +106,52 @@ function mostrarError(campo, texto) {
 function limpiarError(campo) {
     campo.classList.remove('invalid');
     document.getElementById('error-' + campo.id).textContent = '';
+}
+
+// ---------------------------------------------------------
+// Avances: filtros por estado y boton "Ver detalle" (parte de Yilmar)
+// ---------------------------------------------------------
+function iniciarAvances() {
+    const filterButtons = document.querySelectorAll("[data-filter]");
+    const progressItems = document.querySelectorAll(".progress-item");
+    const noResults = document.querySelector(".no-results");
+
+    filterButtons.forEach(function (button) {
+        button.addEventListener("click", function () {
+            const filter = button.dataset.filter;
+            let visibleItems = 0;
+
+            filterButtons.forEach(function (filterButton) {
+                const isActive = filterButton === button;
+                filterButton.classList.toggle("active", isActive);
+                filterButton.setAttribute("aria-pressed", String(isActive));
+            });
+
+            progressItems.forEach(function (item) {
+                const isVisible = filter === "todos" || item.dataset.status === filter;
+                item.hidden = !isVisible;
+                if (isVisible) {
+                    visibleItems += 1;
+                }
+            });
+
+            if (noResults) {
+                noResults.hidden = visibleItems > 0;
+            }
+        });
+    });
+
+    document.querySelectorAll("[data-toggle-details]").forEach(function (button) {
+        button.addEventListener("click", function () {
+            const detail = document.getElementById(button.dataset.toggleDetails);
+            if (!detail) {
+                return;
+            }
+
+            const isExpanded = button.getAttribute("aria-expanded") === "true";
+            detail.hidden = isExpanded;
+            button.setAttribute("aria-expanded", String(!isExpanded));
+            button.firstChild.textContent = isExpanded ? "Ver detalle " : "Ocultar detalle ";
+        });
+    });
 }

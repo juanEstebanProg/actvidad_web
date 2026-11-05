@@ -1,15 +1,180 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <h1>o Lista o galería de los avances del proyecto (pueden usar
-Materialize Collections o Grid System).
-o Integrar alguna interacción básica en JavaScript (por
-ejemplo, mostrar/ocultar contenido, cambio de color, etc.)</h1>
+    <meta name="description" content="Consulta las etapas y avances del proyecto Jay-wallet.">
+    <title>Avances | Jay-wallet</title>
+
+    <!-- Fuente Poppins (Google Fonts) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <!-- Iconos de Material -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Materialize CSS (CDN) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <!-- Nuestra hoja de estilos (SIEMPRE después de Materialize) -->
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    
+
+    <!-- ===== NAVBAR ===== -->
+    <nav aria-label="Navegación principal">
+        <div class="nav-wrapper container">
+            <a href="index.html" class="brand-logo">
+                <img src="img/icono.webp" alt="Logo Jay-wallet">
+                Jay-wallet
+            </a>
+            <a href="#" data-target="menu-movil" class="sidenav-trigger" aria-label="Abrir menú"><i class="material-icons">menu</i></a>
+            <ul class="right hide-on-med-and-down">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="nosotros.html">Nosotros</a></li>
+                <li><a href="objetivos.html">Objetivos</a></li>
+                <li class="active"><a href="avances.html" aria-current="page">Avances</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Menú lateral para celular -->
+    <ul class="sidenav" id="menu-movil">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="nosotros.html">Nosotros</a></li>
+        <li><a href="objetivos.html">Objetivos</a></li>
+        <li><a href="avances.html">Avances</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+    </ul>
+
+    <!-- ===== BANNER ===== -->
+    <section class="jw-banner">
+        <div class="container">
+            <p class="eyebrow">De la idea a la aplicación</p>
+            <h2>Avances del proyecto</h2>
+            <p>Estas son las etapas trabajadas y los próximos pasos de Jay-wallet.</p>
+        </div>
+    </section>
+
+    <!-- ===== CONTENIDO ===== -->
+    <main>
+        <section class="section container" aria-labelledby="progress-title">
+            <div class="section-heading">
+                <p class="eyebrow">Seguimiento</p>
+                <h2 id="progress-title">Nuestro proceso</h2>
+                <p>Filtra las etapas por su estado para consultar el progreso.</p>
+            </div>
+
+            <div class="filter-controls" role="group" aria-label="Filtrar avances por estado">
+                <button class="btn filter-button active" type="button" data-filter="todos" aria-pressed="true">Todos</button>
+                <button class="btn filter-button" type="button" data-filter="completado" aria-pressed="false">Completados</button>
+                <button class="btn filter-button" type="button" data-filter="proceso" aria-pressed="false">En proceso</button>
+                <button class="btn filter-button" type="button" data-filter="siguiente" aria-pressed="false">Próximos</button>
+            </div>
+
+            <div class="row progress-grid">
+                <div class="col s12 m6 l4 progress-item" data-status="completado">
+                    <article class="card progress-card">
+                        <div class="card-content">
+                            <span class="status-label status-done">Completado</span>
+                            <span class="card-title">1. Idea del proyecto</span>
+                            <p>Definimos Jay-wallet como una aplicación web para ayudar a organizar préstamos y deudas.</p>
+                            <div class="progress-detail" id="detail-idea" hidden>
+                                <p>El enfoque inicial es facilitar el registro, la consulta y el seguimiento de las cuentas.</p>
+                            </div>
+                            <button class="btn-flat detail-button" type="button" data-toggle-details="detail-idea" aria-expanded="false">
+                                Ver detalle <i class="material-icons right" aria-hidden="true">expand_more</i>
+                            </button>
+                        </div>
+                    </article>
+                </div>
+                <div class="col s12 m6 l4 progress-item" data-status="completado">
+                    <article class="card progress-card">
+                        <div class="card-content">
+                            <span class="status-label status-done">Completado</span>
+                            <span class="card-title">2. Identidad inicial</span>
+                            <p>Contamos con un nombre para el proyecto y un icono representativo de la aplicación.</p>
+                            <div class="progress-detail" id="detail-identity" hidden>
+                                <p>La identidad visual se podrá ajustar a medida que avance el diseño de las pantallas.</p>
+                            </div>
+                            <button class="btn-flat detail-button" type="button" data-toggle-details="detail-identity" aria-expanded="false">
+                                Ver detalle <i class="material-icons right" aria-hidden="true">expand_more</i>
+                            </button>
+                        </div>
+                    </article>
+                </div>
+                <div class="col s12 m6 l4 progress-item" data-status="proceso">
+                    <article class="card progress-card">
+                        <div class="card-content">
+                            <span class="status-label status-progress">En proceso</span>
+                            <span class="card-title">3. Planeación del sitio</span>
+                            <p>Estamos organizando las secciones informativas y los objetivos del proyecto integrador.</p>
+                            <div class="progress-detail" id="detail-planning" hidden>
+                                <p>El sitio presenta el proyecto, al equipo, sus objetivos, avances y medios de contacto.</p>
+                            </div>
+                            <button class="btn-flat detail-button" type="button" data-toggle-details="detail-planning" aria-expanded="false">
+                                Ver detalle <i class="material-icons right" aria-hidden="true">expand_more</i>
+                            </button>
+                        </div>
+                    </article>
+                </div>
+                <div class="col s12 m6 l4 progress-item" data-status="siguiente">
+                    <article class="card progress-card">
+                        <div class="card-content">
+                            <span class="status-label status-next">Próximo</span>
+                            <span class="card-title">4. Diseño de pantallas</span>
+                            <p>Definir la estructura visual y la navegación principal de Jay-wallet.</p>
+                            <div class="progress-detail" id="detail-design" hidden>
+                                <p>Se priorizará una interfaz clara, adaptable a móviles y fácil de recorrer.</p>
+                            </div>
+                            <button class="btn-flat detail-button" type="button" data-toggle-details="detail-design" aria-expanded="false">
+                                Ver detalle <i class="material-icons right" aria-hidden="true">expand_more</i>
+                            </button>
+                        </div>
+                    </article>
+                </div>
+                <div class="col s12 m6 l4 progress-item" data-status="siguiente">
+                    <article class="card progress-card">
+                        <div class="card-content">
+                            <span class="status-label status-next">Próximo</span>
+                            <span class="card-title">5. Desarrollo y pruebas</span>
+                            <p>Construir las funciones de registro y consulta, y comprobar su funcionamiento.</p>
+                            <div class="progress-detail" id="detail-development" hidden>
+                                <p>Las funciones se implementarán según los requerimientos acordados por el equipo.</p>
+                            </div>
+                            <button class="btn-flat detail-button" type="button" data-toggle-details="detail-development" aria-expanded="false">
+                                Ver detalle <i class="material-icons right" aria-hidden="true">expand_more</i>
+                            </button>
+                        </div>
+                    </article>
+                </div>
+            </div>
+            <p class="no-results center-align" hidden>No hay avances para este filtro.</p>
+        </section>
+    </main>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="page-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col s12 m6">
+                    <h5>Jay-wallet</h5>
+                    <p>Aplicación para gestionar tus préstamos y deudas de forma fácil y segura.</p>
+                </div>
+                <div class="col s12 m6">
+                    <h5>Integrantes</h5>
+                    <p>Juan Esteban Pérez · Alejandra Bernal · Yilmar Riascos</p>
+                </div>
+            </div>
+        </div>
+        <div class="footer-copyright">
+            <div class="container">
+                © 2026 Jay-wallet · Proyecto Integrador I · Universidad del Valle
+            </div>
+        </div>
+    </footer>
+
+    <!-- Materialize JS (CDN) y nuestro JS, al final del body -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="js/main.js"></script>
+
 </body>
 </html>
