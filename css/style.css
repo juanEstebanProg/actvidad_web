@@ -1,22 +1,24 @@
 /* =========================================================
    Jay-wallet - Hoja de estilos personalizada
    Paleta: Turquesa Jay-wallet (colores del icono)
-   Este archivo lo usan TODAS las páginas del sitio.
+   Este archivo lo usan TODAS las paginas del sitio.
    ========================================================= */
 
 /* ---------- 1. Variables de la paleta ---------- */
 :root {
-  --jw-principal: #00616B;    /* turquesa oscuro (petróleo): navbar, footer, títulos */
+  --jw-principal: #00616B;    /* turquesa oscuro (petroleo): navbar, footer, titulos */
   --jw-secundario: #0097A7;   /* turquesa: botones */
   --jw-acento: #FBC02D;       /* amarillo: detalles y hover */
-  --jw-acento-claro: #FEF781; /* amarillo claro del ícono: fondos suaves */
-  --jw-fondo: #F3F8F9;        /* gris muy claro: fondo de la página */
+  --jw-acento-claro: #FEF781; /* amarillo claro del icono: fondos suaves */
+  --jw-fondo: #F3F8F9;        /* gris muy claro: fondo de la pagina */
   --jw-texto: #263238;        /* gris oscuro: texto normal */
   --jw-blanco: #FFFFFF;
+  --jw-error: #C62828;        /* rojo: errores del formulario */
   --jw-sombra: 0 4px 14px rgba(0, 97, 107, 0.12);
   --jw-radio: 12px;
 }
-/* ---------- 2. Base: tipografía y fondo ---------- */
+
+/* ---------- 2. Base: tipografia y fondo ---------- */
 body {
   display: flex;
   min-height: 100vh;
@@ -27,7 +29,7 @@ body {
 }
 
 main {
-  flex: 1 0 auto; /* empuja el footer al fondo de la página */
+  flex: 1 0 auto; /* empuja el footer al fondo de la pagina */
   padding: 30px 0 50px;
 }
 
@@ -37,7 +39,7 @@ h1, h2, h3, h4, h5, h6 {
   color: var(--jw-principal);
 }
 
-/* Título de sección con línea amarilla debajo */
+/* Titulo de seccion con linea amarilla debajo */
 .jw-titulo {
   position: relative;
   padding-bottom: 12px;
@@ -59,6 +61,7 @@ h1, h2, h3, h4, h5, h6 {
   left: 50%;
   transform: translateX(-50%);
 }
+
 /* ---------- 3. Componente Materialize: NAVBAR ---------- */
 nav {
   background-color: var(--jw-principal);
@@ -91,18 +94,19 @@ nav ul a:hover {
   color: var(--jw-acento);
 }
 
-/* Página actual resaltada en el menú (class="active" en el <li>) */
+/* Pagina actual resaltada en el menu (class="active" en el <li>) */
 nav ul li.active {
   background-color: transparent;
   border-bottom: 3px solid var(--jw-acento);
 }
 
-/* Menú lateral en celular */
+/* Menu lateral en celular */
 .sidenav li > a:hover {
   color: var(--jw-principal);
   background-color: var(--jw-acento-claro);
 }
-/* ---------- 4. Banner / encabezado de página ---------- */
+
+/* ---------- 4. Banner / encabezado de pagina ---------- */
 .jw-banner {
   background: linear-gradient(135deg, var(--jw-principal), var(--jw-secundario));
   color: var(--jw-blanco);
@@ -130,6 +134,7 @@ nav ul li.active {
   border-top: 5px solid var(--jw-acento);
   padding: 30px;
 }
+
 /* ---------- 6. FOOTER ---------- */
 .page-footer {
   background-color: var(--jw-principal);
@@ -143,4 +148,144 @@ nav ul li.active {
 
 .page-footer .footer-copyright {
   background-color: rgba(0, 0, 0, 0.15);
+}
+
+/* ---------- 7. Componente Materialize: BOTONES ---------- */
+.btn,
+.btn-large {
+  background-color: var(--jw-secundario);
+  border-radius: 25px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  text-transform: none;
+  padding: 0 28px;
+}
+
+.btn:hover,
+.btn:focus,
+.btn-large:hover,
+.btn-large:focus {
+  background-color: var(--jw-principal);
+}
+
+/* Boton amarillo (secundario): class="btn jw-btn-acento" */
+.btn.jw-btn-acento {
+  background-color: var(--jw-acento);
+  color: var(--jw-texto);
+}
+
+.btn.jw-btn-acento:hover {
+  background-color: #F9A825;
+}
+
+/* ---------- 8. Componente Materialize: FORMULARIOS ---------- */
+/* Cambia el verde azulado por defecto de Materialize por nuestra paleta */
+.input-field input:focus,
+.input-field textarea:focus {
+  border-bottom: 2px solid var(--jw-secundario) !important;
+  box-shadow: 0 1px 0 0 var(--jw-secundario) !important;
+}
+
+.input-field input:focus + label,
+.input-field textarea:focus + label {
+  color: var(--jw-secundario) !important;
+}
+
+.input-field .prefix.active {
+  color: var(--jw-secundario);
+}
+
+/* Campo con error (lo usa la validacion en main.js) */
+.input-field input.invalid,
+.input-field textarea.invalid {
+  border-bottom: 2px solid var(--jw-error) !important;
+  box-shadow: 0 1px 0 0 var(--jw-error) !important;
+}
+
+.jw-error {
+  display: block;
+  min-height: 18px;
+  margin-left: 3rem;
+  color: var(--jw-error);
+  font-size: 0.85rem;
+}
+
+/* ---------- 9. Componente Materialize: TOAST (mensajes emergentes) ---------- */
+.toast.jw-toast-ok {
+  background-color: var(--jw-secundario);
+  font-weight: 500;
+}
+
+.toast.jw-toast-error {
+  background-color: var(--jw-error);
+  font-weight: 500;
+}
+
+/* ---------- 10. Componente Materialize: CARDS (para Nosotros) ---------- */
+.card {
+  border-radius: var(--jw-radio);
+  box-shadow: var(--jw-sombra);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 24px rgba(0, 97, 107, 0.2);
+}
+
+.card .card-title {
+  font-weight: 600;
+  color: var(--jw-principal);
+}
+
+.card .card-action {
+  border-top: 2px solid var(--jw-acento-claro);
+}
+
+.card .card-action a {
+  color: var(--jw-secundario) !important;
+  font-weight: 600;
+}
+
+/* ---------- 11. COLLAPSIBLE y COLLECTION (para Objetivos y Avances) ---------- */
+.collapsible {
+  border-radius: var(--jw-radio);
+  overflow: hidden;
+}
+
+.collapsible-header {
+  font-weight: 500;
+}
+
+.collapsible-header i {
+  color: var(--jw-secundario);
+}
+
+.collapsible li.active .collapsible-header {
+  background-color: var(--jw-acento-claro);
+  color: var(--jw-principal);
+}
+
+.collection {
+  border-radius: var(--jw-radio);
+}
+
+.collection .collection-item.active {
+  background-color: var(--jw-secundario);
+}
+
+/* ---------- 12. Responsive (celular) ---------- */
+@media (max-width: 600px) {
+  nav .brand-logo {
+    font-size: 1.3rem;
+  }
+
+  .jw-caja {
+    padding: 20px;
+  }
+
+  .jw-banner {
+    padding: 30px 0;
+  }
 }

@@ -59,8 +59,39 @@
                 <div class="col s12 m10 offset-m1 l8 offset-l2">
                     <div class="jw-caja">
                         <h4 class="jw-titulo">Envíanos un mensaje</h4>
-                        <!-- PASO 4: aquí irá el formulario -->
-                        <p>Formulario en construcción.</p>
+                        <form id="form-contacto" novalidate>
+                            <!-- Nombre -->
+                            <div class="input-field">
+                                <i class="material-icons prefix">person</i>
+                                <input id="nombre" type="text">
+                                <label for="nombre">Nombre completo</label>
+                                <span class="jw-error" id="error-nombre"></span>
+                            </div>
+
+                            <!-- Correo -->
+                            <div class="input-field">
+                                <i class="material-icons prefix">email</i>
+                                <input id="correo" type="email">
+                                <label for="correo">Correo electrónico</label>
+                                <span class="jw-error" id="error-correo"></span>
+                            </div>
+
+                            <!-- Mensaje -->
+                            <div class="input-field">
+                                <i class="material-icons prefix">message</i>
+                                <textarea id="mensaje" class="materialize-textarea"></textarea>
+                                <label for="mensaje">Mensaje</label>
+                                <span class="jw-error" id="error-mensaje"></span>
+                            </div>
+
+                            <!-- Botón -->
+                            <div class="center-align">
+                                <button type="submit" class="btn-large waves-effect waves-light">
+                                    Enviar mensaje
+                                    <i class="material-icons right">send</i>
+                                </button>
+                            </div>
+                        </form>
                     </div>
                 </div>
             </div>
@@ -89,4 +120,8 @@
     </footer>
 
     <!-- Materialize JS (CDN) y nuestro JS, al final del body -->
-    <script
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="js/main.js"></script>
+
+</body>
+</html>
