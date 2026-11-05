@@ -1,3 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Jay-wallet: aplicación web para gestionar préstamos y deudas.">
+    <title>Inicio | Jay-wallet</title>
+
+    <!-- Fuente Poppins (Google Fonts) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <!-- Iconos de Material -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Materialize CSS (CDN) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <!-- Nuestra hoja de estilos (SIEMPRE después de Materialize) -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body id="inicio">
+
+    <!-- ===== NAVBAR ===== -->
+    <nav aria-label="Navegación principal">
+        <div class="nav-wrapper container">
+            <a href="index.html" class="brand-logo">
+                <img src="img/icono.webp" alt="Logo Jay-wallet">
+                Jay-wallet
+            </a>
+            <a href="#" data-target="menu-movil" class="sidenav-trigger" aria-label="Abrir menú"><i class="material-icons">menu</i></a>
+            <ul class="right hide-on-med-and-down">
+                <li class="active"><a href="index.html" aria-current="page">Inicio</a></li>
+                <li><a href="nosotros.html">Nosotros</a></li>
+                <li><a href="objetivos.html">Objetivos</a></li>
+                <li><a href="avances.html">Avances</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Menú lateral para celular -->
+    <ul class="sidenav" id="menu-movil">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="nosotros.html">Nosotros</a></li>
+        <li><a href="objetivos.html">Objetivos</a></li>
+        <li><a href="avances.html">Avances</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+    </ul>
+
+    <!-- ===== BANNER DE INICIO ===== -->
+    <section class="jw-banner jw-hero-inicio">
+        <div class="container">
+            <div class="row valign-wrapper">
+                <div class="col s12 m8">
+                    <p class="eyebrow">Proyecto Integrador I</p>
+                    <h2>Tus préstamos, siempre bajo control</h2>
+                    <p>Jay-wallet te ayuda a recordar a quién le prestaste, cuánto te deben y a dónde se va tu dinero.</p>
+                    <a href="nosotros.html" class="btn-large jw-btn-acento waves-effect">Conoce el proyecto</a>
+                    <a href="contacto.html" class="btn-large waves-effect waves-light">Contáctanos</a>
+                </div>
+                <div class="col m4 hide-on-small-only center-align">
+                    <img src="img/icono.webp" alt="Ícono de Jay-wallet" class="jw-logo-grande">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== CONTENIDO ===== -->
+    <main>
+        <div class="container">
+            <!-- Descripción del proyecto -->
+            <div class="jw-caja">
+                <h4 class="jw-titulo">Descripción del proyecto</h4>
+                <p>Este proyecto tiene como objetivo crear una aplicación web que permita a los usuarios tener control sobre sus préstamos y deudas, enfocada en los préstamos, con características que faciliten el uso, la interacción, el desplazamiento y la visualización de la aplicación y de todos los datos que necesita el usuario.</p>
+            </div>
+
+            <!-- Accesos a las secciones -->
+            <h4 class="jw-titulo center-align" style="margin-top: 50px;">Explora el sitio</h4>
+            <div class="row">
+                <div class="col s12 m6 l3">
+                    <a href="nosotros.html" class="card jw-seccion-card">
                         <div class="card-content center-align">
                             <i class="material-icons large">groups</i>
                             <span class="card-title">Nosotros</span>
